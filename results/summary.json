@@ -1,0 +1,335 @@
+{
+  "generated_at": "2026-11-22T19:14:53",
+  "dataset": {
+    "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), hourly",
+    "total_raw_rows": 1797120,
+    "clean_rows": 1797120,
+    "raw_files": 30,
+    "raw_size_mb": 107.5,
+    "cities": 30,
+    "regions": [
+      "Central",
+      "Coastal",
+      "East",
+      "Himalayan",
+      "Islands",
+      "North",
+      "Northeast",
+      "South",
+      "West"
+    ],
+    "date_start": "2019-01-01",
+    "date_end": "2025-10-31",
+    "daily_rows": 74880,
+    "db_size_mb": 15.9
+  },
+  "models": {
+    "gbt_temp_max": {
+      "rmse": 1.4233,
+      "mae": 1.0313,
+      "r2": 0.9611
+    },
+    "lr_temp_max": {
+      "rmse": 1.4405,
+      "mae": 1.0537,
+      "r2": 0.9602
+    },
+    "rf_rain": {
+      "auc": 0.9283,
+      "accuracy": 0.8548,
+      "f1": 0.8246,
+      "precision": 0.7904,
+      "recall": 0.8618
+    },
+    "kmeans_climate": {
+      "silhouette": 0.5673
+    }
+  },
+  "train_rows": 54690,
+  "test_rows": 20070,
+  "test_predictions_rows": 60210,
+  "top_feature_importance": {
+    "gbt_temp_max": [
+      {
+        "feature": "temp_max",
+        "importance": 0.14906
+      },
+      {
+        "feature": "cloud_mean",
+        "importance": 0.08393
+      },
+      {
+        "feature": "lat",
+        "importance": 0.06361
+      },
+      {
+        "feature": "humidity_mean",
+        "importance": 0.06307
+      },
+      {
+        "feature": "doy_cos",
+        "importance": 0.05255
+      },
+      {
+        "feature": "wind_max",
+        "importance": 0.05126
+      },
+      {
+        "feature": "temp_max_lag3",
+        "importance": 0.05018
+      },
+      {
+        "feature": "doy_sin",
+        "importance": 0.04619
+      }
+    ],
+    "lr_temp_max": [
+      {
+        "feature": "temp_max",
+        "importance": 0.32931
+      },
+      {
+        "feature": "temp_mean",
+        "importance": 0.25917
+      },
+      {
+        "feature": "temp_max_roll7",
+        "importance": 0.1323
+      },
+      {
+        "feature": "temp_min",
+        "importance": 0.10689
+      },
+      {
+        "feature": "temp_max_lag1",
+        "importance": 0.0251
+      },
+      {
+        "feature": "wind_max",
+        "importance": 0.02288
+      },
+      {
+        "feature": "cloud_mean",
+        "importance": 0.01851
+      },
+      {
+        "feature": "wind_mean",
+        "importance": 0.01595
+      }
+    ],
+    "rf_rain": [
+      {
+        "feature": "precip_sum",
+        "importance": 0.28767
+      },
+      {
+        "feature": "precip_roll7",
+        "importance": 0.20589
+      },
+      {
+        "feature": "precip_lag1",
+        "importance": 0.14742
+      },
+      {
+        "feature": "cloud_mean",
+        "importance": 0.07223
+      },
+      {
+        "feature": "dew_point_mean",
+        "importance": 0.06622
+      },
+      {
+        "feature": "humidity_mean",
+        "importance": 0.0641
+      },
+      {
+        "feature": "pressure_mean",
+        "importance": 0.02279
+      },
+      {
+        "feature": "doy_cos",
+        "importance": 0.02247
+      }
+    ]
+  },
+  "climate_clusters": {
+    "Dehradun": 2,
+    "Delhi": 2,
+    "Thiruvananthapuram": 0,
+    "Chennai": 0,
+    "Lucknow": 2,
+    "Jaipur": 2,
+    "Indore": 2,
+    "Ahmedabad": 2,
+    "Kolkata": 0,
+    "Shillong": 1,
+    "Guwahati": 0,
+    "Patna": 2,
+    "Chandigarh": 2,
+    "Mumbai": 0,
+    "Bengaluru": 0,
+    "Shimla": 1,
+    "Bhubaneswar": 0,
+    "Raipur": 2,
+    "Visakhapatnam": 0,
+    "Panaji": 0,
+    "Kochi": 0,
+    "Srinagar": 3,
+    "Port Blair": 0,
+    "Hyderabad": 2,
+    "Bhopal": 2,
+    "Pune": 2,
+    "Nagpur": 2,
+    "Jaisalmer": 2,
+    "Leh": 3,
+    "Varanasi": 2
+  },
+  "climate_cluster_members": {
+    "0": [
+      "Bengaluru",
+      "Bhubaneswar",
+      "Chennai",
+      "Guwahati",
+      "Kochi",
+      "Kolkata",
+      "Mumbai",
+      "Panaji",
+      "Port Blair",
+      "Thiruvananthapuram",
+      "Visakhapatnam"
+    ],
+    "1": [
+      "Shillong",
+      "Shimla"
+    ],
+    "2": [
+      "Ahmedabad",
+      "Bhopal",
+      "Chandigarh",
+      "Dehradun",
+      "Delhi",
+      "Hyderabad",
+      "Indore",
+      "Jaipur",
+      "Jaisalmer",
+      "Lucknow",
+      "Nagpur",
+      "Patna",
+      "Pune",
+      "Raipur",
+      "Varanasi"
+    ],
+    "3": [
+      "Leh",
+      "Srinagar"
+    ]
+  },
+  "hottest_city": {
+    "city": "Chennai",
+    "value": 28.14
+  },
+  "coldest_city": {
+    "city": "Leh",
+    "value": 4.56
+  },
+  "wettest_city": {
+    "city": "Kochi",
+    "value": 3179.97
+  },
+  "driest_city": {
+    "city": "Jaisalmer",
+    "value": 298.88
+  },
+  "record_high": {
+    "city": "Jaisalmer",
+    "value": 48.3,
+    "date": "2024-05-24"
+  },
+  "record_low": {
+    "city": "Leh",
+    "value": -21.7,
+    "date": "2025-02-07"
+  },
+  "extreme_event_counts": {
+    "heatwave": 726,
+    "cold_wave": 697,
+    "heavy_rain": 360
+  },
+  "warming_trend_c_per_decade": {
+    "Ahmedabad": 1.376,
+    "Bengaluru": 0.364,
+    "Bhopal": -0.203,
+    "Bhubaneswar": 1.263,
+    "Chandigarh": 1.017,
+    "Chennai": 0.443,
+    "Dehradun": 0.008,
+    "Delhi": 0.84,
+    "Guwahati": 0.541,
+    "Hyderabad": 0.505,
+    "Indore": 0.635,
+    "Jaipur": 0.121,
+    "Jaisalmer": 0.57,
+    "Kochi": -0.048,
+    "Kolkata": 0.992,
+    "Leh": 2.89,
+    "Lucknow": 1.528,
+    "Mumbai": 1.409,
+    "Nagpur": -0.004,
+    "Panaji": 0.556,
+    "Patna": 0.88,
+    "Port Blair": 0.954,
+    "Pune": 1.203,
+    "Raipur": 0.616,
+    "Shillong": 1.602,
+    "Shimla": 1.719,
+    "Srinagar": 3.147,
+    "Thiruvananthapuram": -0.145,
+    "Varanasi": 0.7,
+    "Visakhapatnam": 0.971
+  },
+  "avg_warming_trend_c_per_decade": 0.882,
+  "monsoon_share_pct": {
+    "Ahmedabad": 93.4,
+    "Bengaluru": 55.5,
+    "Bhopal": 92.6,
+    "Bhubaneswar": 72.4,
+    "Chandigarh": 67.4,
+    "Chennai": 33.7,
+    "Dehradun": 77.2,
+    "Delhi": 76.5,
+    "Guwahati": 69.7,
+    "Hyderabad": 77.7,
+    "Indore": 91.2,
+    "Jaipur": 85.3,
+    "Jaisalmer": 89.6,
+    "Kochi": 52.4,
+    "Kolkata": 69.8,
+    "Leh": 39.2,
+    "Lucknow": 84.5,
+    "Mumbai": 91.7,
+    "Nagpur": 89.4,
+    "Panaji": 87.0,
+    "Patna": 83.6,
+    "Port Blair": 53.8,
+    "Pune": 83.9,
+    "Raipur": 88.4,
+    "Shillong": 65.0,
+    "Shimla": 61.0,
+    "Srinagar": 28.9,
+    "Thiruvananthapuram": 40.4,
+    "Varanasi": 85.9,
+    "Visakhapatnam": 67.5
+  },
+  "durations_s": {
+    "etl_total": 51.89,
+    "training": 126.8,
+    "train_total": 148.15
+  },
+  "spark": {
+    "master": "local[16]",
+    "cores": 16,
+    "shuffle_partitions": 32,
+    "driver_memory": "4g",
+    "spark_version": "3.5.3"
+  }
+}

@@ -1,0 +1,28 @@
+npm notice run weather-bigdata-dashboard@1.0.0 dev
+npm notice run vite --host 127.0.0.1 --port 5173
+
+  VITE v5.4.21  ready in 421 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+  ➜  press h + enter to show help
+7:15:16 pm [vite] http proxy error: /api/health
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+7:15:19 pm [vite] http proxy error: /api/cities
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+7:17:51 pm [vite] hmr update /src/styles.css
+7:18:03 pm [vite] hmr update /src/components/Chart.jsx
+7:18:03 pm [vite] hmr update /src/pages/Overview.jsx
+7:18:03 pm [vite] hmr update /src/components/visuals.jsx
+7:18:03 pm [vite] hmr update /src/pages/Explorer.jsx
+7:18:04 pm [vite] hmr invalidate /src/components/Chart.jsx Could not Fast Refresh ("gradient" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+7:18:04 pm [vite] hmr update /src/pages/Analytics.jsx, /src/pages/Pipeline.jsx, /src/pages/Extremes.jsx, /src/pages/Overview.jsx, /src/pages/Explorer.jsx, /src/pages/Models.jsx
+7:18:05 pm [vite] hmr invalidate /src/pages/Models.jsx Could not Fast Refresh ("clusterStats" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+7:18:05 pm [vite] hmr update /src/App.jsx, /src/pages/Explorer.jsx
+7:18:21 pm [vite] hmr update /src/App.jsx
+7:18:21 pm [vite] hmr update /src/components/visuals.jsx
+7:19:24 pm [vite] hmr update /src/styles.css
+7:19:48 pm [vite] hmr update /src/styles.css
+7:19:48 pm [vite] hmr update /src/styles.css
+7:22:42 pm [vite] hmr update /src/pages/Overview.jsx
